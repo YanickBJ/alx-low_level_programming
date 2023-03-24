@@ -1,22 +1,20 @@
+#include <stdio.h>
 #include "main.h"
 /**
- * print_number - prints an integer
- * @n:.input integer parameter
- *
- *Owned by Bwave ICT/ Bright Daniel
- */
-void print_number(int n)
-{
-	unsigned int i = n;
+ * main - prints the largest prime factor of 612852475143
+ * Bwave ICT / Bright Daniel
+ * Return: always 0
+ **/
 
-	if (n < 0)
+int main(void)
+{
+	unsigned long int i, n = 612852475143;
+
+	for (i = 3; i < 782849; i = i + 2)
 	{
-		_putchar(45);
-		i = -i;
+		while ((n % i == 0) && (n != i))
+			n = n / i;
 	}
-	if (i / 10)
-	{
-		print_number(i / 10);
-	}
-	_putchar(i % 10 + '0');
+	printf("%lu\n", n);
+	return (0);
 }
