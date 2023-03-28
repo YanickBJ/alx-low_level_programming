@@ -3,7 +3,7 @@
 
 /**
  * _strlen - return the length of a string
- * Owned By Bwave
+ *
  * @s: char to check
  * Description: this will return the length of a string
  * Return: 0 is success
