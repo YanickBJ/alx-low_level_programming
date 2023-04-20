@@ -14,11 +14,11 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 
-	va_start (ap, n); /* Initialise la liste d'arguments. */
+	va_start(ap, n); /* Initialise la liste d'arguments. */
 
 	somme = 0;
 	for (je = 0; je < n; je++)
-		somme += va_arg (ap, int); /* Récupère la valeur de l'argument suivant. */
-	va_end (ap); /* Nettoyer. */
+		somme += va_arg(ap, int); /* Récupère la valeur de l'argument suivant. */
+	va_end(ap); /* Nettoyer. */
 	return (somme);
 }
